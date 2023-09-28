@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Transparent Login</title>
+    <style>
+        :root{
+    --primary-clr:#ff258b;
+    --text-clr: #062339;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./colorful-2468874_1280.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper{
+    width: 420px;
+    padding: 80px 40px;
+    
+    border: 2px solid rgba(255, 0, 144, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px var(--text-clr);
+
+}
+
+.title{
+    font-size: 36px;
+    color: #eee;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px var(--text-clr), 0 0 5px var(--primary-clr);
+
+}
+
+.user_input{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.user_input input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid rgba(6, 35, 57, .5);
+    outline: none;
+    border-radius: 40px;
+    font-size: 18px;
+    color: var(--text-clr);
+    padding: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.user_input input::placeholder{
+    color: rgba(6, 35, 57, .5);
+}
+.user_input input:hover{
+    box-shadow: 0 0 5px var(--text-clr);
+}
+
+.user_input i{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #eee;
+}
+
+.forgot{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 14px;
+    margin: 15px 5px 20px;
+}
+
+.forgot a{
+    color: var(--text-clr);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    padding: .5rem 9rem;
+    background: transparent;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-clr);
+    border: 0.5 solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: all o.2s ease-in-out;
+    transform: translateY(-5px);
+}
+.btn:hover{
+ background: var(--primary-clr);
+ border: none;
+ color: #eee;
+}
+
+.btn:active{
+    transform: translate(0px);
+    transform: scale(0.99);
+}
+
+.account_link{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.account_link p a{
+    color: var(--text-clr);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 5px;
+}
+
+.account_link p a:hover{
+    text-decoration: underline;
+
+}
+
+
+
+    </style>
+</head>
+
+    <div class="wrapper">
+        <form action="#">
+           <div class="title">Login</div>
+           <div class="user_input">
+            <input type="text" placeholder="username" required>
+            <i class="bi bi-person-fill" id="usernameinput"></i>
+        </div>
+
+        <div class="user_input">
+         <input type="password" placeholder="password" required>
+         <i class="bi bi-lock-fill"></i>
+     </div>
+
+     <div class="forgot">
+<a href="#">Forget Password</a>
+     </div>
+
+     <a href="https://chat.openai.com/c/5d1e6628-ddce-4616-9ea7-3b88c132967f"><button type="submit" class="btn">Login</button></a>
+<div class="account_link">
+    <p>Don't have an account?<a href="#">Create now</a></p>
+</div>
+        </form>
+    </div>
+</body>
+</html>
